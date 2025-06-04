@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E6E0F8">
+
+    <!-- Greeting -->
+    <TextView
+        android:id="@+id/greetingTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello, Username"
+        android:textSize="24sp"
+        android:textColor="#4B3B4A"
+        android:padding="16dp" />
+
+    <!-- Top Books Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Top Books"
+        android:textSize="18sp"
+        android:textColor="#4B3B4A"
+        android:background="#5D4037"
+        android:padding="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/booksRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#D3D3D3"
+        android:padding="8dp"
+        android:scrollbars="horizontal" />
+
+    <!-- Stores Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stores"
+        android:textSize="18sp"
+        android:textColor="#4B3B4A"
+        android:background="#5D4037"
+        android:padding="8dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Image Carousel -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#D3D3D3"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/storeImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <Button
+            android:id="@+id/prevButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="<"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="#5D4037"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text=">"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="#5D4037"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <!-- Menu -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#5D4037"
+        android:gravity="center"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/allBooksButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="All Books"
+            android:textColor="#FFFFFF"
+            android:background="?attr/selectableItemBackground" />
+
+        <Button
+            android:id="@+id/ourStoreButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Our Store"
+            android:textColor="#FFFFFF"
+            android:background="?attr/selectableItemBackground" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Log Out"
+            android:textColor="#FFFFFF"
+            android:background="?attr/selectableItemBackground" />
+    </LinearLayout>
+
+</LinearLayout>
